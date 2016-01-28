@@ -23,6 +23,7 @@ GEM
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
     tilt (2.0.2)
+    vcr (3.0.1)
 
 PLATFORMS
   ruby
@@ -30,6 +31,7 @@ PLATFORMS
 DEPENDENCIES
   rspec
   sinatra
+  vcr
 
 BUNDLED WITH
    1.11.2
