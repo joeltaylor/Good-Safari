@@ -1,15 +1,12 @@
-  require 'vcr'
+require 'vcr'
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock # or :fakeweb
+end
+
 RSpec.configure do |config|
-
-
-  VCR.config do |c|
-    c.cassette_library_dir     = 'spec/cassettes'
-    c.stub_with                :fakeweb
-    c.default_cassette_options = { :record => :new_episodes }
-  end
-
   config.extend VCR::RSpec::Macros
-
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
