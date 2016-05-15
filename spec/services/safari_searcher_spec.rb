@@ -1,4 +1,4 @@
-require_relative './../../app/services/safari_searcher.rb'
+require_relative './../../services/safari_searcher.rb'
 
 describe SafariSearcher do
   describe "#commit" do
